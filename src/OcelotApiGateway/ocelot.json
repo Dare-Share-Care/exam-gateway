@@ -2,30 +2,30 @@
   "Routes": [
     {
       "UpstreamPathTemplate": "/api/Order",
-      "UpstreamHttpMethod": [
-        "Get",
-        "Post",
-        "Put"
-      ],
-      "DownStreamScheme": "http",
+      "UpstreamHttpMethod": ["Get", "Post", "Put"],
+      "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "orderwebapi",
-          "Port": "80"
+          "Host": "mtogo-orders-web",
+          "Port": 80
         }
       ],
-      "DownstreamPathTemplate": "/api/Order"
+      "DownstreamPathTemplate": "/api/Order" 
     },
     {
       "UpstreamPathTemplate": "/api/Order/{id}",
-      "UpstreamHttpMethod": [
-        "Get",
-        "Post",
-        "Put"
-      ]
+      "UpstreamHttpMethod": ["Get", "Post", "Put"],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "mtogo-orders-web",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Order/{id}"
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:5000"
+    "BaseUrl": "http://localhost:8000"
   }
 }

@@ -1,0 +1,17 @@
+﻿version: '3.8'
+
+services:
+  mtogo.auth:
+    container_name: mtogo-gateway
+    image: mtogo.gateway
+    build:
+      context: .
+      dockerfile: src/OcelotApiGateway/Dockerfile
+    ports:
+      - "8080:80"
+    networks:
+      - kafka
+
+networks:
+  kafka:
+    external: true
