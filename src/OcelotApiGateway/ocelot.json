@@ -10,7 +10,7 @@
           "Port": 80
         }
       ],
-      "DownstreamPathTemplate": "/api/Order" 
+      "DownstreamPathTemplate": "/api/Order"
     },
     {
       "UpstreamPathTemplate": "/api/Order/{id}",
@@ -23,6 +23,18 @@
         }
       ],
       "DownstreamPathTemplate": "/api/Order/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Auth/{action}",
+      "UpstreamHttpMethod": ["Post"],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "mtogo-auth",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Auth/{action}"
     }
   ],
   "GlobalConfiguration": {
