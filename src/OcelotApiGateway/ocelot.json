@@ -35,6 +35,54 @@
         }
       ],
       "DownstreamPathTemplate": "/api/Auth/{action}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Restaurant/get-all-restaurants",
+      "UpstreamHttpMethod": ["Get","Post", "Put", "Delete"],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "mtogo-restaurant-web",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Restaurant/get-all-restaurants"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Restaurant/{id}/menu",
+      "UpstreamHttpMethod": ["Get", "Post", "Put", "Delete"],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "mtogo-restaurant-web",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Restaurant/get-all-restaurants"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Restaurant/create-restaurant",
+      "UpstreamHttpMethod": ["Get", "Post", "Put", "Delete"],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "mtogo-restaurant-web",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Restaurant/create-restaurant"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Restaurant/{action}/{id}",
+      "UpstreamHttpMethod": ["Get", "Post", "Put", "Delete"],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "mtogo-restaurant-web",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Restaurant/{action}/{id}"
     }
   ],
   "GlobalConfiguration": {
