@@ -83,6 +83,66 @@
         }
       ],
       "DownstreamPathTemplate": "/api/Restaurant/{action}/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Courier/mark-order-delivered",
+      "UpstreamHttpMethod": ["Get", "Post", "Put", "Delete"],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "mtogo-delivery",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Courier/mark-order-delivered"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Courier/claim-order",
+      "UpstreamHttpMethod": ["Get", "Post", "Put", "Delete"],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "mtogo-delivery",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Courier/claim-order"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Courier/delivery/{id}",
+      "UpstreamHttpMethod": ["Get", "Post", "Put", "Delete"],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "mtogo-delivery",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Courier/delivery/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Courier/deliveries/courier/{id}",
+      "UpstreamHttpMethod": ["Get", "Post", "Put", "Delete"],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "mtogo-delivery",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Courier/deliveries/courier/{id}"
+    },
+    {
+      "UpstreamPathTemplate": "/api/Courier/deliveries/courier/{courierId}/status/{status}",
+      "UpstreamHttpMethod": ["Get", "Post", "Put", "Delete"],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "mtogo-delivery",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/Courier/deliveries/courier/{courierId}/status/{status}"
     }
   ],
   "GlobalConfiguration": {
